@@ -1,0 +1,6 @@
+6:25 AM 11/8/2026
+
+npm install -g @angular/cli 
+ng --version
+npm install -g npm@12.2.2
+ng new DreamApp
