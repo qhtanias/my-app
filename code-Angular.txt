@@ -4,3 +4,4 @@ npm install -g @angular/cli
 ng --version
 npm install -g npm@12.2.2
 ng new DreamApp
+ng g c header
