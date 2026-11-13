@@ -8,4 +8,4 @@ ng g c header
 ng g c header
 ng g c header
 npm install bootstrap
-
+ng build my-lib
