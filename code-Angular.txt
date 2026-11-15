@@ -9,3 +9,7 @@ ng g c header
 ng g c header
 npm install bootstrap
 ng build my-lib
+cd my-app
+ng generate library my-lib
+ng g library my-lib
+npm install -g @angular/cli
