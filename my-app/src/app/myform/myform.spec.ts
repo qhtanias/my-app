@@ -1,21 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Myform } from './myform';
+import { Component } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
-describe('Myform', () => {
-  let component: Myform;
-  let fixture: ComponentFixture<Myform>;
+@Component({
+  selector: 'app-myform',
+  standalone: true,
+  imports: [FormsModule, RouterLink],
+  templateUrl: './myform.component.html',
+  styleUrls: ['./myform.component.css'],
+})
+export class MyformComponent {
+  name: string = '';
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [Myform],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(Myform);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  submitForm(form: NgForm): void {
+    if (form.valid) {
+      console.log('Submitted name:', this.name);
+      // call your service here, e.g.:
+      // this.customerService.save({ name: this.name }).subscribe(...);
+      form.resetForm();
+    }
+  }
+}

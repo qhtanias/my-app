@@ -1,1 +1,6 @@
-<p>myform works!</p>
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" #nameInput />
+
+<p>Value: {{ nameInput.value }}</p>
+
+<button (click)="submitForm(nameInput.value)">Submit</button>
