@@ -13,3 +13,9 @@ cd my-app
 ng generate library my-lib
 ng g library my-lib
 npm install -g @angular/cli
+ng test my-lib
+ng lint my-lib
+ng g c customerList
+ng g c custdetail
+ng g class customer
+
