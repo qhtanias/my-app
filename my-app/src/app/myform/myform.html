@@ -1,6 +1,11 @@
 <label for="name">Name:</label>
 <input type="text" id="name" name="name" #nameInput />
-
+<a routerLink="/myform">Go to My Form</a>
+<a routerLink="/myform2">Go to My Form 2</a>
+<a routerLink="/myform3">Go to My Form 3</a>
+<app-myform></app-myform>
+<router-outlet></router-outlet>
 <p>Value: {{ nameInput.value }}</p>
+<app-myform2></app-myform2>
 
 <button (click)="submitForm(nameInput.value)">Submit</button>
